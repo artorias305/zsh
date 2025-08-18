@@ -93,3 +93,4 @@ export BROWSER="/mnt/c/Windows/explorer.exe"
 alias see="explorer.exe"
 
 eval "$(starship init zsh)"
+eval "$(zoxide init zsh)"
