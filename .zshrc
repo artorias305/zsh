@@ -17,7 +17,7 @@ fi
 
 source "${ZINIT_HOME}/zinit.zsh"
 
-zinit ice depth=1; zinit light romkatv/powerlevel10k
+# zinit ice depth=1; zinit light romkatv/powerlevel10k
 
 zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions
@@ -88,3 +88,8 @@ export FZF_DEFAULT_OPTS=" \
 [ -f ~/.fzf.sh ] && source ~/.fzf.zsh
 
 export PATH="$HOME/.cargo/bin:$PATH"
+
+export BROWSER="/mnt/c/Windows/explorer.exe"
+alias see="explorer.exe"
+
+eval "$(starship init zsh)"
