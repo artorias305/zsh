@@ -17,7 +17,7 @@ fi
 
 source "${ZINIT_HOME}/zinit.zsh"
 
-# zinit ice depth=1; zinit light romkatv/powerlevel10k
+zinit ice depth=1; zinit light romkatv/powerlevel10k
 
 zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions
@@ -65,6 +65,8 @@ alias ll='eza -la --group-directories-first --icons'
 alias bat='bat'
 alias fbat="fzf --preview 'bat --style=numbers --color=always --line-range :500 {}'"
 
+alias win="cd /mnt/c/Users/kiq/"
+
 [ -s "/home/user/.bun/_bun" ] && source "/home/user/.bun/_bun"
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
@@ -75,7 +77,7 @@ export PATH="$GOPATH/bin:"$PATH
 
 export _ZO_ECHO='1'
 
-export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+# export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
 export FZF_DEFAULT_OPTS=" \
 --color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
