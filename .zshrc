@@ -17,7 +17,9 @@ fi
 
 source "${ZINIT_HOME}/zinit.zsh"
 
-zinit ice depth=1; zinit light romkatv/powerlevel10k
+# zinit ice depth=1; zinit light romkatv/powerlevel10k
+
+PROMPT='%~ $ '
 
 zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions
@@ -61,6 +63,7 @@ alias ls='eza --group-directories-first --icons'
 alias la='eza -a --group-directories-first --icons'
 alias l='eza -l --group-directories-first --icons'
 alias ll='eza -la --group-directories-first --icons'
+alias src="src ~/.zshrc"
 
 alias bat='bat'
 alias fbat="fzf --preview 'bat --style=numbers --color=always --line-range :500 {}'"
@@ -94,5 +97,5 @@ export PATH="$HOME/.cargo/bin:$PATH"
 export BROWSER="/mnt/c/Windows/explorer.exe"
 alias see="explorer.exe"
 
-eval "$(starship init zsh)"
+# eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
