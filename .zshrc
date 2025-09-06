@@ -20,6 +20,14 @@ source "${ZINIT_HOME}/zinit.zsh"
 # zinit ice depth=1; zinit light romkatv/powerlevel10k
 
 # PROMPT='%~ $ '
+# PROMPT=$'\n%~ \nλ '
+
+parse_git_branch() {
+  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ git:\1/'
+}
+
+setopt PROMPT_SUBST
+PROMPT=$'%~ $(parse_git_branch) \nλ '
 
 zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions
@@ -97,5 +105,5 @@ export PATH="$HOME/.cargo/bin:$PATH"
 export BROWSER="/mnt/c/Windows/explorer.exe"
 alias see="explorer.exe"
 
-eval "$(starship init zsh)"
+# eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
