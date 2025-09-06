@@ -72,7 +72,7 @@ alias ls='eza --group-directories-first --icons'
 alias la='eza -a --group-directories-first --icons'
 alias l='eza -l --group-directories-first --icons'
 alias ll='eza -la --group-directories-first --icons'
-alias src="src ~/.zshrc"
+alias src="source ~/.zshrc"
 
 alias bat='bat'
 alias fbat="fzf --preview 'bat --style=numbers --color=always --line-range :500 {}'"
