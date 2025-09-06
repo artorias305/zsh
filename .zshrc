@@ -26,8 +26,9 @@ parse_git_branch() {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ git:\1/'
 }
 
+autoload -U colors && colors
 setopt PROMPT_SUBST
-PROMPT=$'%~ $(parse_git_branch) \nλ '
+PROMPT=$'%{$fg[blue]%}%~ $(parse_git_branch) \n%{$fg[blue]%}λ %{$reset_color%}%'
 
 zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions
