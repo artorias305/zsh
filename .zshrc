@@ -26,9 +26,9 @@ parse_git_branch() {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ git:\1/'
 }
 
-autoload -U colors && colors
-setopt PROMPT_SUBST
-PROMPT=$'%{$fg[blue]%}%~ $(parse_git_branch) \n%{$fg[blue]%}λ %{$reset_color%}%'
+# autoload -U colors && colors
+# setopt PROMPT_SUBST
+# PROMPT=$'%{$fg[blue]%}%~ $(parse_git_branch) \n%{$fg[blue]%}λ %{$reset_color%}%'
 
 zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions
@@ -106,5 +106,5 @@ export PATH="$HOME/.cargo/bin:$PATH"
 export BROWSER="/mnt/c/Windows/explorer.exe"
 alias see="explorer.exe"
 
-# eval "$(starship init zsh)"
+eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
