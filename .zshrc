@@ -19,7 +19,7 @@ source "${ZINIT_HOME}/zinit.zsh"
 
 # zinit ice depth=1; zinit light romkatv/powerlevel10k
 
-PROMPT='%~ $ '
+# PROMPT='%~ $ '
 
 zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions
@@ -97,5 +97,5 @@ export PATH="$HOME/.cargo/bin:$PATH"
 export BROWSER="/mnt/c/Windows/explorer.exe"
 alias see="explorer.exe"
 
-# eval "$(starship init zsh)"
+eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
